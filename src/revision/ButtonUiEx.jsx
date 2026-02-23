@@ -1,8 +1,8 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { decre, incre } from './counterSlice'
+import { decre, incre } from './counterSliceEx'
 
-const ButtonUi = () => {
+const ButtonUiEx = () => {
 
     const count = useSelector((state) => state.counter.value)
     const dis = useDispatch()
@@ -11,9 +11,9 @@ const ButtonUi = () => {
         <div>
             <h1>{count}</h1>
             <button onClick={() => dis(incre())}>+++</button>
-            <button onClick={() => dis(decre())}>- - -</button>
+            <button onClick={() => dis(decre())}>---</button>
         </div>
     )
 }
 
-export default ButtonUi
+export default ButtonUiEx
